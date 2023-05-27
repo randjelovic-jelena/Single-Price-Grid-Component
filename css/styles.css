@@ -1,0 +1,167 @@
+/*Karla Google Font*/
+ @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root{
+
+  --color-grayish-blue: hsl(218, 22%, 67%);
+  --color-light-gray:hsl(204, 43%, 93%);
+  --color-bright-yellow:hsl(71deg 63.55% 50.02%);
+  --col-light-cyan:hsla(179, 62%, 43%,80%);
+  --color-cyan:hsl(179, 62%, 43%);
+  --col-white:rgba(255,255,255,1);
+
+}
+*{
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+  font-family: 'Karla', sans-serif;
+}
+button:hover, li:hover, a:hover{
+  cursor: pointer;
+}
+a{
+  text-decoration: none;
+  color:var(--col-white);
+}
+body{
+  background-color:var(--color-light-gray);
+  padding: 2rem;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#container{
+  max-width: 690px;
+  background-color: var(--col-white);
+  box-shadow: 1px 1px 16px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/*----------------------------
+-----JOIN COMMUNITY BOX-------
+-----------------------------*/
+#join-community{
+  padding: 40px;
+}
+.join-main-heading{
+  color: var(--color-cyan);
+  margin-bottom: 25px;
+}
+.small-heading{
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--color-bright-yellow);
+  margin-bottom: 15px;
+}
+.join-text{
+  color: var(--color-grayish-blue);
+  font-size: 16px;
+  line-height: 27px;
+  margin-bottom: 10px;
+}
+/*----------------------------
+------SUBSCRIBE/WHY-US--------
+-----------------------------*/
+#subscribe-why-us{
+  display: flex;
+}
+.subscribe, .why-us{
+  width:50%;
+  padding: 40px;
+}
+.main-heading{
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--color-light-gray);
+  margin-bottom: 20px;
+}
+/*SUBSCRIBE*/
+.subscribe{
+  background-color: var(--color-cyan);
+}
+.per-month{
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.dollar{
+  font-size: 33px;
+  font-weight: 700;
+  color: var(--color-light-gray);
+}
+.per{
+  color: hsl(0deg 0% 100% / 46%);
+  margin-left: 15px;
+}
+.subscribe-text{
+  color: var(--color-light-gray);
+  margin-bottom: 30px;
+}
+#sign-up-btn{
+  border: none;
+  width: 100%;
+  padding: 16px;
+  border-radius: 6px;
+  background-color:hsl(71deg 75.47% 52.98%);
+  font-weight: 800;
+  font-size: 16px;
+  color: var(--color-cyan);
+}
+#sign-up-btn:hover{
+  background-color:var(--color-bright-yellow);
+}
+/*WHY US*/
+.why-us{
+  background-color: var(--col-light-cyan);
+}
+.about-us-list li{
+  color: var(--color-light-gray);
+  margin-bottom: 4px;
+  list-style-type: none;
+  font-size: 15px;
+}
+.about-us-list li:hover{
+  text-decoration:underline;
+}
+
+/********************
+  MEDIA QUERY
+********************/
+@media (max-width:750px){
+  body{
+    height: unset;
+  }
+  #container{
+    border-radius: 7px;
+    margin-top: 5%;
+  }
+  #subscribe-why-us{
+    flex-direction: column;
+  }
+  .subscribe button{
+    width:50%;
+  }
+  .subscribe, .why-us{
+    width:100%;
+  }
+}
+@media (max-width:400px){
+  .subscribe button{
+    width:100%;
+  }
+  #join-community, .subscribe, .why-us{
+    padding: 30px;
+  }
+ .join-main-heading{
+    font-size: 1.3rem;
+  }
+  .small-heading{
+    font-size: 1rem;
+    text-shadow: 0px 0px 0px rgba(0,0,0,0.1);
+  }
+
+}
